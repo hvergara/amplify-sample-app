@@ -2,7 +2,7 @@ name: Attempt to build project
 
 on:
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/5 * * * *"
 
 jobs:
   build:
