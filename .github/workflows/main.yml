@@ -1,17 +1,16 @@
 name: Build Sample App
 
 on:
-  workflow_dispatch:
-#   schedule:
-#     - cron: "*/5 * * * *"
+  schedule:
+    - cron: "*/10 * * * *"
 
 jobs:
   build:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: [ '16' ]
-#        node: [ '14', '16', '17' ]
+        node: [ '14', '16', '17' ]
+        
     name: Build against Node v${{ matrix.node }}
     steps:
       - name: Checkout repository
